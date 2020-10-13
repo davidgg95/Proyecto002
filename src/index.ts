@@ -17,6 +17,14 @@ const main = async () => {
                 n2 =  parseInt( await leerTeclado('Dame la altura'))
                 console.log(`El resultado es: ${triangulo(n1, n2)}`)
                 break
+            case 3:
+                console.log("Estoy en opción 3")
+                await cuadrado()
+                break
+            case 4:
+                console.log("Estoy en opción 4")
+                await circulo()
+                break
             case 0:
                 console.log('\nAdios')
                 break
@@ -35,6 +43,19 @@ const rectangulo = async () => {
 }
 
 const triangulo = (n1: number, n2: number): number => n1 * n2 /2
+
+const cuadrado = async () => {
+    let n1: number
+    n1 =  parseInt( await leerTeclado('Dame un lado')) 
+    console.log(`El area es ${n1 ** 2}`)
+}
+
+const circulo = async () => {
+    let n1: number
+    let n2: number
+    n2 =  parseInt( await leerTeclado('Dame el radio')) 
+    console.log(`El area es ${3.14 * n2 ** 2}`)
+}
 
 main()
 
